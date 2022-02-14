@@ -1,0 +1,9 @@
+.vscode
+*.zwc
+build
+zzz
+*.ignore
+node_modules
+.DS_Store
+.db
+_

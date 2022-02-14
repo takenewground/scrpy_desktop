@@ -1,0 +1,41 @@
+{
+  "name": "scrpy_desktop",
+  "version": "0.0.0",
+  "author": "d4tocchini",
+  "description": "",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d4tocchini/node-c.git"
+  },
+  "bugs": {
+    "url": "https://github.com/d4tocchini/node-c/issues"
+  },
+  "scripts": {
+    "script": "node scripts ",
+    "build": "source scripts.sh; build ",
+    "__build": "node scripts build  ",
+    "__build-electron": "node-gypcc --gyp-runtime=electron -I./ -I${PREFIX}/include -L${PREFIX}/lib -ltcc -o build/electron",
+    "rebuild": "node scripts rebuild -I. casm.c ",
+    "test": "node ./test/index.js ",
+    "electron": "electron --force_high_performance_gpu --js-flags=\"\" ./index.cjs",
+    "__install": "source scripts.sh; install"
+  },
+  "main": "index.js",
+  "files": [
+    "c.js",
+    "d.js",
+    "casm.js",
+    "build/",
+    "src/fs"
+  ],
+  "devdeps": {},
+  "dependencies": {
+      "sudo-prompt":"9.2.1",
+      "node-fetch":"3.2.0"
+  },
+  "devDependencies": {
+    "node-gypcc": "file://../node-gypcc",
+    "electron": "17.x"
+  }
+}
