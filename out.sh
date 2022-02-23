@@ -7,13 +7,15 @@ mkdir -p "$OUT_DIR"
 mkdir -p "$CACHE_DIR"
 
 clean() {
-    rm -rf ${CACHE_DIR}
     rm -rf ${OUT_DIR}
+}
+
+clean_cache() {
+    rm -rf ${CACHE_DIR}
 }
 
 mac_x64() {
     TGT="mac_x64"
-
     e_file="electron-v${ELECTRON_V}-darwin-x64"
     _mac
 }

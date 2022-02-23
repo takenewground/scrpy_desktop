@@ -60,8 +60,9 @@ postinstall() {
         head -c 1024 /dev/urandom | md5 | head -c 24 >authtoken.secret
         chown 0 authtoken.secret
         chgrp 0 authtoken.secret
-        chmod 0600 authtoken.secret
+        # chmod 0600 authtoken.secret
     fi
+    chmod 0644 authtoken.secret
 
     if [ -f zerotier-one.pid ]; then
         kill `cat zerotier-one.pid`
@@ -126,16 +127,14 @@ postinstall() {
 
 # # cd "/Library/Application Support/ZeroTier/One"
 
-if [[ ! -z "${NETWORK_ID}" ]]; then
+# if [[ ! -z "${NETWORK_ID}" ]]; then
     CLI="zerotier-cli"
-    echo "${CLI}" join "${NETWORK_ID}"
-    while ! "${CLI}" join "${NETWORK_ID}"
+    # echo "${CLI}" join "${NETWORK_ID}"
+    while ! "${CLI}" status
     do
-        echo "..."
-        sleep 1.5
+        echo "... zerotier-cli status ..."
+        sleep .3
     done
-
-
-fi
+# fi
 
 exit 0
