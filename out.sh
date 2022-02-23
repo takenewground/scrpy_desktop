@@ -60,6 +60,8 @@ _mac() {
 
     rm -rf "${app_dir}/Contents/Resources/wan.mac"
     gcp -r "./src/wan.mac" "${app_dir}/Contents/Resources"
+
+    xattr -cr "${app_dir}"
 }
 
 mac() {

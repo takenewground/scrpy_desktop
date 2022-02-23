@@ -160,7 +160,7 @@ function ui_init()
     })
 }
 function ui_preload() {
-    main_window.loadURL(APP_URL);
+    // main_window.loadURL(APP_URL);
 }
 function ui_load() {
     main_window.loadURL(APP_URL);
