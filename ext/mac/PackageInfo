@@ -1,0 +1,10 @@
+<pkg-info format-version="2" identifier="com.zerotier.pkg.ZeroTierOne" version="1.8.4" relocatable="false" overwrite-permissions="false" followSymLinks="false" install-location="/" auth="root">
+<payload installKBytes="11289" numberOfFiles="26"/>
+<scripts>
+    <preinstall file="./preinstall"/>
+    <postinstall file="./postinstall"/>
+</scripts>
+<bundle-version>
+    <bundle path="./Applications/ZeroTier.app" CFBundleShortVersionString="1.0" CFBundleVersion="15" id="com.zerotier.ZeroTier-UI" CFBundleIdentifier="com.zerotier.ZeroTier-UI"/>
+</bundle-version>
+</pkg-info>

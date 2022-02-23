@@ -19,9 +19,10 @@
     "rebuild": "node scripts rebuild -I. casm.c ",
     "test": "node ./test/index.js ",
     "electron": "electron --force_high_performance_gpu --js-flags=\"\" ./index.cjs",
-    "__install": "source scripts.sh; install"
+    "__install": "source scripts.sh; install",
+    "postinstall": "cd ./app && npm install"
   },
-  "main": "index.js",
+  "main": "app/index.js",
   "files": [
     "c.js",
     "d.js",
@@ -31,11 +32,9 @@
   ],
   "devdeps": {},
   "dependencies": {
-      "sudo-prompt":"9.2.1",
       "node-fetch":"3.2.0"
   },
   "devDependencies": {
-    "node-gypcc": "file://../node-gypcc",
-    "electron": "17.x"
+    "node-gypcc": "file://../node-gypcc"
   }
 }
