@@ -1,4 +1,5 @@
+export APP_NAME="SCRPY"
+export APP_VERSION="0.0.0"
 export OUT_DIR="./out"
 export CACHE_DIR="./.cache"
-export APP_NAME="SCRPY"
 export ELECTRON_V="17.0.1"
