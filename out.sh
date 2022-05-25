@@ -43,7 +43,7 @@ _mac() {
     tgt_dir="${OUT_DIR}/${TGT}"
     app_dir="${tgt_dir}/${APP_NAME}.app"
     app_plist="${tgt_dir}/${APP_NAME}.app/Contents/Info.plist"
-    # rm -rf "${tgt_dir}"
+    rm -rf "${tgt_dir}"
     echo "building ${TGT}..."
     mkdir -p "${tgt_dir}"
     if [[ ! -d "${app_dir}" ]] ; then
